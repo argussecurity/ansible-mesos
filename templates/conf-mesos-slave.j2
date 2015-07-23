@@ -7,6 +7,6 @@ export MESOS_PORT="{{ mesos_slave_port }}"
 export MESOS_WORK_DIR="{{ mesos_work_dir }}"
 export MESOS_ATTRIBUTES="{{ mesos_slave_attributes }}"
 export MESOS_LOGGING_LEVEL="WARNING"
-{% if mesos_slave_resources %}
+{% if mesos_slave_resources is defined %}
 export MESOS_RESOURCES="{{ mesos_slave_resources }}"
 {% endif %}
